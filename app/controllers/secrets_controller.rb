@@ -9,6 +9,6 @@ before_action :require_login
   private
 
   def require_login
-    return redirect_to(controller: 'sessions', action: 'new') unless session.include? :name
+    return redirect_to login_path unless session.include? :name
   end
 end
